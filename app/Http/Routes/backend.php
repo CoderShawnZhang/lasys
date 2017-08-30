@@ -13,6 +13,13 @@ Route::get('index/',[
 ]);
 
 /**
+ * 清理缓存
+ */
+Route::get('menu/clear',[
+    'as' => 'backend.menu.clear',
+    'uses' => 'MenuController@clear'
+]);
+/**
  * 菜单管理
  */
 Route::resource('menu', 'MenuController');

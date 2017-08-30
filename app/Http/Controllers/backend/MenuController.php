@@ -94,4 +94,12 @@ class MenuController extends Controller
     {
         //
     }
+
+    /**
+     * 清除缓存（跳转到当前页面？？？）
+     */
+    public function clear(){
+        MenuLasys::clearCache();
+        return redirect()->Route('backend.menu.index');
+    }
 }

@@ -7,6 +7,6 @@ namespace App\Facades;
  */
 class Test{
     public function doSomeThing(){
-        return '具体做的事情交给门面来处理';
+        return '具体做的事情交给门面来处理---';
     }
 }

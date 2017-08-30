@@ -33,11 +33,20 @@ class MenuLasys extends Common
     {
         $menus = Cache::get(self::ALL_TOP_MENUS_CACHE);
         if(empty($menus)){
-            $menus[''] = '所有菜单';
+            $menu[''] = '所有菜单';
             $menus = $this->model->whereHide(0)->whereParentId(0)->orderBy('sort','desc')->lists('name','id')->toArray();
-            $menus = $menus + $menus;
+            $menus = $menu + $menus;
             Cache::forever(self::ALL_TOP_MENUS_CACHE,$menus);
         }
         return $menus;
+    }
+
+    /**
+     * 清除所有缓存
+     */
+    public function clearCache()
+    {
+        Cache::forget(self::ALL_DISPLAY_MENUS_CACHE);
+        Cache::forget(self::ALL_TOP_MENUS_CACHE);
     }
 }

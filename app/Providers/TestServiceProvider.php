@@ -23,10 +23,9 @@ class TestServiceProvider extends ServiceProvider
         $this->app->singleton('test',function(){
            return new Test;
         });
-
-        $this->app->bind('App\Contracts\TestContract',function(){
-           return new TestService();
-        });
+//        $this->app->bind('App\Contracts\TestContract',function(){
+//           return new TestService();
+//        });
     }
 
 }

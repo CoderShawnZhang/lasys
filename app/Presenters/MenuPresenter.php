@@ -17,6 +17,12 @@ class MenuPresenter extends CommonPresenter
                 'icon'  => 'plus',
                 'class' => 'success',
                 'title' => '新增',
+            ],
+            [
+                'route' => 'backend.menu.clear',
+                'icon'  => 'plus',
+                'class' => 'error',
+                'title' => '清理缓存',
             ]
         ];
     }

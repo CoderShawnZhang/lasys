@@ -45,6 +45,7 @@ return [
     ],
     'system'     => [
         'group' => '系统配置',
+        'group1' => '系统配置1',
     ],
     'index'      => [
         'index' => '首页管理',
