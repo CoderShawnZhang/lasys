@@ -12,6 +12,7 @@
 <body class="skin-black fixed">
 
 <div class="wrapper">
+    @inject('mainPresenter','App\Presenters\MainPresenter')
     @include('backend.layout.header')
     @include('backend.layout.menu')
     <div class="content-wrapper">

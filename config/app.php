@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'zh',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'zh',
 
     /*
     |--------------------------------------------------------------------------
@@ -140,12 +140,14 @@ return [
         /*
          * Application Service Providers...
          */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\TestServiceProvider::class,
         App\Providers\LasysServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
 
     ],
 
@@ -195,8 +197,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'TestClass' => App\Facades\TestClass::class,
-        'MenuLasys' => App\Facades\MenuLasysFacade::class
-
+        'MenuLasys' => App\Facades\MenuLasysFacade::class,
+        'RoleLasys' => App\Facades\RoleLasysFacade::class,
+        'UserLasys' => App\Facades\UserLasysFacade::class
     ],
 
 ];

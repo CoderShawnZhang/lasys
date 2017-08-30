@@ -25,7 +25,7 @@
             @foreach($menu as $key => $val)
               <tr>
                 <th>{{ $val['id'] }}</th>
-                <th>{{ $val['description'] }}</th>
+                <th>{{ trans($val['name']) }}</th>
                 <th>{{ $val['route'] }}</th>
                 <th>{{ $val['sort'] }}</th>
                 <th>{{ $val['hide'] }}</th>
