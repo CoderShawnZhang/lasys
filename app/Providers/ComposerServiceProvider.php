@@ -33,7 +33,7 @@ class ComposerServiceProvider extends ServiceProvider
             $view->with(compact('userInfo'));
         });
 
-        view()->composer('backend.layout.menu', 'App\Http\ViewComposers\MainComposer');
+        view()->composer($this->main, 'App\Http\ViewComposers\MainComposer');
     }
 
     /**

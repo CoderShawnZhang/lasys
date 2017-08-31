@@ -2,23 +2,6 @@
 
 @section('after.css')
     <style>
-        html {
-            position: relative;
-            min-height: 100%;
-        }
-
-        body {
-            padding-top: 50px;
-            /* Margin bottom by footer height */
-            margin-bottom: 50px;
-            font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif;
-            font-weight: 600;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
-        }
-
         .sub-header {
             padding-bottom: 10px;
             border-bottom: 1px solid #EEE;
@@ -260,6 +243,7 @@
 @endsection
 
 @section('content')
+    <div class="box">
     <div class="row">
         <div class="col-md-12">
             <div class="box">
@@ -348,6 +332,7 @@
                 </div>
             </form>
         </div>
+    </div>
     </div>
 @stop
 

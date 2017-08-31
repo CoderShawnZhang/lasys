@@ -7,3 +7,6 @@ Homestead.json
 /storage
 /.env
 _ide_helper.php
+.gitignore
+.gitattributes
+index.php

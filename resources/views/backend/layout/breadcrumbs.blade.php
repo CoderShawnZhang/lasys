@@ -1,7 +1,8 @@
-@if(1)
+
+@if(!empty($title[$route]['name']))
     <h1>
-        11111111
-        <small>22222222</small>
+        {{ trans($title[$route]['name']) }}
+        <small>{{ trans($title[$route]['description']) }}</small>
     </h1>
 @endif
-{{--{!! $mainPresenter->renderBreadcrumbs($menus,$route) !!}--}}
+{!! $mainPresenter->renderBreadcrumbs($menus,$route) !!}

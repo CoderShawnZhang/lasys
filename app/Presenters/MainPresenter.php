@@ -7,6 +7,16 @@ use UserLasys;
 
 class MainPresenter extends CommonPresenter
 {
+    /**
+     * 左侧栏视图缓存键
+     */
+    const SIDEBAR_MENUS_CACHE = 'sidebar_menus_view_cache';
+
+    /**
+     * 面包屑导航缓存键
+     */
+    const BREADCRUMBS_MENUS_CACHE = 'breadcrumbs_menus_view_cache:';
+
     public function renderMenu(array $menus,$route){
         /*
         $user = Auth::user();

@@ -1,6 +1,7 @@
 <?php
 namespace App\LasysClass;
 
+use App\Presenters\MainPresenter;
 use Cache;
 
 class MenuLasys extends Common
@@ -48,5 +49,7 @@ class MenuLasys extends Common
     {
         Cache::forget(self::ALL_DISPLAY_MENUS_CACHE);
         Cache::forget(self::ALL_TOP_MENUS_CACHE);
+        Cache::forget(MainPresenter::SIDEBAR_MENUS_CACHE);
+        Cache::forget(MainPresenter::BREADCRUMBS_MENUS_CACHE);
     }
 }
