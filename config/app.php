@@ -148,6 +148,7 @@ return [
         App\Providers\TestServiceProvider::class,
         App\Providers\LasysServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
 
     ],
 

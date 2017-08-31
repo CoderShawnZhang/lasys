@@ -6,8 +6,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <title>{{ config('lasys.title') }}</title>
+    @yield('before.css')
     <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/backend/plugins/pace/pace.min.css') }}">
     <link rel="stylesheet" type="text/css" href="/public{{ elixir('assets/backend/css/app.min.css') }}">
+    @yield('after.css')
 </head>
 <body class="skin-black fixed">
 
@@ -50,5 +52,6 @@
         @endif
     });
 </script>
+@yield('scripts')
 </body>
 </html>
