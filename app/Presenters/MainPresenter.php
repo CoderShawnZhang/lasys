@@ -145,7 +145,7 @@ class MainPresenter extends CommonPresenter
     public function renderBreadcrumbs(array $menus, $route)
     {
         $breadcrumbs = Cache::get(self::BREADCRUMBS_MENUS_CACHE . $route);
-        if($breadcrumbs){
+        if(!$breadcrumbs){
             return $breadcrumbs;
         } else {
             $array = self::buildBreadcrumbsArray($menus, $route);

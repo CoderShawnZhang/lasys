@@ -65,9 +65,8 @@ class AuthController extends Controller
     }
 
     public function login(){
-        return redirect()->route('backend.index.index');
         if($input = Input::all()){
-
+            return redirect()->route('backend.index.index');
         }else{
             return view('auth.login');
         }

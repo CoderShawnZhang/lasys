@@ -25,6 +25,33 @@ Route::get('menu/clear',[
 Route::resource('menu', 'MenuController');
 
 /**
+ * 用户管理
+ */
+Route::resource('user','UserController');
+
+/**
+ * 角色管理
+ */
+Route::resource('role','RoleController');
+
+/**
+ * 权限管理
+ */
+Route::resource('permission','PermissionController');
+
+/**
+ * 操作管理
+ */
+Route::resource('action','ActionController');
+
+/**
+ * 文件管理
+ */
+Route::get('file/index',[
+   'as' => 'backend.file.index',
+    'uses' => 'FileController@index'
+]);
+/**
  * 日记管理
  */
 Route::get('log/',[

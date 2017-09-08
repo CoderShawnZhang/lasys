@@ -26,7 +26,7 @@
               <tr>
                 <th>{{ $val['id'] }}</th>
                 <th>{{ trans($val['name']) }}</th>
-                <th>{{ $val['route'] }}</th>
+                <th><a href="{{ url($val['route']) }}"></a>{{ $val['route'] }}</th>
                 <th>{{ $val['sort'] }}</th>
                 <th>{{ $val['hide'] }}</th>
                 <th>

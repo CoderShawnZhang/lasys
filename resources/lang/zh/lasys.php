@@ -44,7 +44,7 @@ return [
         'list'  => '文件列表',
     ],
     'system'     => [
-        'group' => '系统配置111',
+        'group' => '系统配置',
         'group1' => '系统配置',
     ],
     'index'      => [
