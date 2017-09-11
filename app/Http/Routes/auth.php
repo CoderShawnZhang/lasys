@@ -1,5 +1,9 @@
 <?php
 /**
- * 登录认证
+ * 认证路由。。。
  */
-Route::any('auth/login','AuthController@login');
+Route::get('auth/login','AuthController@getLogin');
+Route::post('auth/login','AuthController@postLogin');
+Route::get('auth/logout','AuthController@getLogout');
+
+//注册路由。。。

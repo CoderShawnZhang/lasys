@@ -24,7 +24,7 @@
                     <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="username" name="email" value="{{old('email')}}">
                         <span class="fa fa-user form-control-feedback"></span>
-                        {{--@include('backend.layout.tip',['field'=>'email'])--}}
+                        @include('backend.layout.tip',['field'=>'email'])
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                     <div class="form-group has-feedback">
                         <input type="password" class="form-control" placeholder="password" name="password" value="{{old('password')}}">
                         <span class="fa fa-lock form-control-feedback"></span>
-{{--                        @include('backend.layout.tip',['field'=>'password'])--}}
+                        @include('backend.layout.tip',['field'=>'password'])
                     </div>
                 </div>
             </div>
