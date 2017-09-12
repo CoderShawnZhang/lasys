@@ -50,4 +50,8 @@ return [
     'index'      => [
         'index' => '首页管理',
     ],
+    'mail'      => [
+        'list' => '邮件管理',
+        'queuelist' => '邮件队列'
+    ]
 ];

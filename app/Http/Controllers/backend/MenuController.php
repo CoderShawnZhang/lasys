@@ -44,7 +44,14 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            if(MenuLasys::create($request->all())){
+                return $this->successRoutTo('backend.menu.index', "新增菜单成功");
+            }
+        }
+        catch (\Exception $e) {
+            return $this->errorBackTo(['error' => $e->getMessage()]);
+        }
     }
 
     /**

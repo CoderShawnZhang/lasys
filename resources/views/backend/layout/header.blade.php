@@ -21,7 +21,7 @@
                                 <a href="#" class="btn btn-black btn-flat">个人信息</a>
                             </div>
                             <div class="pull-right">
-                                <a href="/auth/logout" class="btn btn-black btn-flat">退出登录</a>
+                                <a href="{{ url('auth/logout') }}" class="btn btn-black btn-flat">退出登录</a>
                             </div>
                         </li>
                     </ul>

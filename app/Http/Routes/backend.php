@@ -58,3 +58,25 @@ Route::get('log/',[
     'as' => 'backend.log.index',
     'uses' => 'LogController@index'
 ]);
+
+/**
+ * 邮件队列列表
+ */
+Route::get('mail/queuelist',[
+   'as' =>'backend.mail.queuelist',
+    'uses' =>'MailController@queuelist'
+]);
+/**
+ * 发送邮件
+ */
+Route::get('mail/sendReminderEmail',[
+    'as' => 'backend.mail.sendReminderEmail',
+    'uses' => 'MailController@sendReminderEmail'
+]);
+/**
+ * 发送邮件
+ */
+Route::get('mail/sendMailTest',[
+    'as' => 'backend.mail.sendMailTest',
+    'uses' => 'MailController@sendMailTest'
+]);

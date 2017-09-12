@@ -88,11 +88,11 @@ class AuthController extends Controller
      */
     public function getLogin()
     {
-        if($input = Input::all()){
-            return redirect()->route('backend.index.index');
-        }else{
-            return view('auth.login');
+        if (view()->exists('auth.authenticate')) {
+            return view('auth.authenticate');
         }
+
+        return view('auth.login');
     }
 
     /**
@@ -136,5 +136,11 @@ class AuthController extends Controller
             ->withErrors([
                 $this->loginUsername() => $this->getFailedLoginMessage(),
             ]);
+    }
+
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect()->Route('auth.login');
     }
 }
