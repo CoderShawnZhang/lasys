@@ -4,10 +4,13 @@ namespace App\Http\Controllers\backend;
 
 use App\Models\Job;
 use App\Models\User;
+use App\Observer\Mail\Event;
+use App\Observer\Mail\Observer1;
 use Illuminate\Http\Request;
 use App\Jobs\SendReminderEmail;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
@@ -33,16 +36,6 @@ class MailController extends Controller
         //
     }
 
-    /**
-     * 开始监听队列
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * 发送提醒邮件到指定用户
@@ -53,9 +46,14 @@ class MailController extends Controller
      */
     public function sendReminderEmail()
     {
-        $user = User::find(4);
+//        $user = User::find(4);
 
-        $this->dispatch(new SendReminderEmail($user));
+        $event = new Event();
+        $event->addobserver(new Observer1());
+
+
+//        $this->dispatch(new SendReminderEmail($user));
+//        return redirect()->Route('backend.mail.queuelist');
     }
 
     public function sendMailTest(){
@@ -66,5 +64,13 @@ class MailController extends Controller
         {
             $message->to('412906819@qq.com', '徐文志')->subject('欢wwwww迎注册我们的网站，请激活您的账号！');
         });
+    }
+
+    /**
+     * 开始监听队列
+     */
+    public function artisanHandle(){
+        $event = new Event();
+        Artisan::call('queue:listen',[]);
     }
 }

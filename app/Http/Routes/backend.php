@@ -67,6 +67,13 @@ Route::get('mail/queuelist',[
     'uses' =>'MailController@queuelist'
 ]);
 /**
+ * 监听队列
+ */
+Route::get('mail/artisanHandle',[
+    'as' => 'backend.mail.artisanHandle',
+    'uses' => 'MailController@artisanHandle'
+]);
+/**
  * 发送邮件
  */
 Route::get('mail/sendReminderEmail',[

@@ -1,15 +1,13 @@
 @extends('backend.layout.main')
+@inject('mailPresenter','App\Presenters\MailPresenter')
 @section('content')
-   <a href="{{ url('backend/mail/sendReminderEmail') }}">发送邮件</a>
    <a href="{{ url('backend/mail/sendMailTest') }}">测试发送邮件</a>
-   {{--@include('backend.components.handle',['handle' => $menuPresenter->getHandleParams()])  --}}{{--新增菜单按钮--}}
-   {{--@include('backend.components.search',['search' => $menuPresenter->getSearchParams()])  --}}{{--查询日期组合按钮--}}
+   @include('backend.components.handle',['handle' => $mailPresenter->getHandleParams()])  新增菜单按钮
    <div class="row">
        <div class="col-md-12">
            <div class="box">
                <div class="box-header">
                    <h3 class="box-title">菜单列表</h3>
-
                    <div class="box-tools"></div>
                </div>
 
